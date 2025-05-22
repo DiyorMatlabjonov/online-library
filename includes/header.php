@@ -15,15 +15,6 @@
                 <li class="nav-item"><a href="login.php" class="nav-link">Вход</a></li>
                 <li class="nav-item"><a href="register.php" class="nav-link">Регистрация</a></li>
             </ul>
-            <ul class="navbar-nav ms-auto">
-                <?php if (isset($_SESSION['user_id'])): ?>
-                    <li class="nav-item"><a href="#" class="nav-link">Привет, <?= htmlspecialchars($_SESSION['user_name']) ?></a></li>
-                    <li class="nav-item"><a href="logout.php" class="nav-link">Выход</a></li>
-                <?php else: ?>
-                    <li class="nav-item"><a href="login.php" class="nav-link">Вход</a></li>
-                    <li class="nav-item"><a href="register.php" class="nav-link">Регистрация</a></li>
-                <?php endif; ?>
-            </ul>
         </div>
     </div>
 </nav>

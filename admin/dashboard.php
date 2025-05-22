@@ -6,7 +6,7 @@ $stmt = $pdo->query("SELECT * FROM books ORDER BY created_at DESC");
 $books = $stmt->fetchAll();
 ?>
 
-<a href="add_book.php">➕ Добавить книгу</a> | 
+<a href="add_book.php">➕ Добавить книгу</a> |
 <a href="logout.php">🚪 Выйти</a>
 
 <h2>Все книги</h2>
@@ -23,9 +23,10 @@ $books = $stmt->fetchAll();
       <td><?= htmlspecialchars($book['author']) ?></td>
       <td><?= htmlspecialchars($book['genre']) ?></td>
       <td>
-        <a href="edit_book.php?id=<?= $book['id'] ?>">Редактировать</a> |
-        <a href="delete_book.php?id=<?= $book['id'] ?>" onclick="return confirm('Удалить?')">Удалить</a>
+        <a href="edit_book.php?id=<?= $book['id'] ?>">✏️ Редактировать</a> |
+        <a href="delete_book.php?id=<?= $book['id'] ?>" onclick="return confirm('Удалить эту книгу?')">🗑️ Удалить</a>
       </td>
+
     </tr>
   <?php endforeach; ?>
 </table>
