@@ -1,10 +1,14 @@
+
 <?php
 require '../includes/auth.php';
 require '../includes/db.php';
 
+
+
 $stmt = $pdo->query("SELECT * FROM books ORDER BY created_at DESC");
-$books = $stmt->fetchAll();
+$books = $stmt->fetchAll()
 ?>
+
 
 <a href="add_book.php">➕ Добавить книгу</a> |
 <a href="logout.php">🚪 Выйти</a>
